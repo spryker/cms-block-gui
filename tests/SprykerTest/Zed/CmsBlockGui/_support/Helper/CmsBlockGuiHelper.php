@@ -18,9 +18,6 @@ use SprykerTest\Zed\CmsBlockGui\PageObject\CmsBlockGuiCreatePage;
 
 class CmsBlockGuiHelper extends Module
 {
-    /**
-     * @return void
-     */
     public function _initialize(): void
     {
         if (class_exists(PropelApplicationPlugin::class)) {
@@ -44,11 +41,6 @@ class CmsBlockGuiHelper extends Module
         $propelServiceProvider->boot(new Application());
     }
 
-    /**
-     * @param \Codeception\TestInterface $test
-     *
-     * @return void
-     */
     public function _before(TestInterface $test): void
     {
         parent::_before($test);
@@ -56,9 +48,6 @@ class CmsBlockGuiHelper extends Module
         $this->cleanUpDatabase();
     }
 
-    /**
-     * @return void
-     */
     public function _afterSuite(): void
     {
         parent::_afterSuite();
@@ -79,19 +68,11 @@ class CmsBlockGuiHelper extends Module
         $this->cleanUpDatabase();
     }
 
-    /**
-     * @return void
-     */
     private function cleanUpDatabase(): void
     {
         $this->removeCmsBlock(CmsBlockGuiCreatePage::FORM_FIELD_NAME_VALUE);
     }
 
-    /**
-     * @param string $cmsBlockName
-     *
-     * @return void
-     */
     protected function removeCmsBlock(string $cmsBlockName): void
     {
         $cmsBlockQuery = new SpyCmsBlockQuery();

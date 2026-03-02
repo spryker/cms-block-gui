@@ -22,22 +22,12 @@ use SprykerTest\Zed\CmsBlockGui\PageObject\CmsBlockGuiCreatePage;
  */
 class CmsBlockGuiCreateCest
 {
-    /**
-     * @param \SprykerTest\Zed\CmsBlockGui\CmsBlockGuiPresentationTester $i
-     *
-     * @return void
-     */
     public function _before(CmsBlockGuiPresentationTester $i): void
     {
         $i->amZed();
         $i->amLoggedInUser();
     }
 
-    /**
-     * @param \SprykerTest\Zed\CmsBlockGui\CmsBlockGuiPresentationTester $i
-     *
-     * @return void
-     */
     public function testICanCreateCmsBlock(CmsBlockGuiPresentationTester $i): void
     {
         $i->amOnPage(CmsBlockGuiCreatePage::URL);

@@ -36,17 +36,11 @@ class CmsBlockGuiToCmsBlockQueryContainerBridge implements CmsBlockGuiToCmsBlock
         return $this->cmsBlockQueryContainer->queryCmsBlockByName($name);
     }
 
-    /**
-     * @return \Orm\Zed\CmsBlock\Persistence\SpyCmsBlockQuery
-     */
     public function queryCmsBlockWithTemplate(): SpyCmsBlockQuery
     {
         return $this->cmsBlockQueryContainer->queryCmsBlockWithTemplate();
     }
 
-    /**
-     * @return \Orm\Zed\CmsBlock\Persistence\SpyCmsBlockTemplateQuery
-     */
     public function queryTemplates(): SpyCmsBlockTemplateQuery
     {
         return $this->cmsBlockQueryContainer->queryTemplates();

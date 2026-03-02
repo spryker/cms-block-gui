@@ -191,9 +191,6 @@ class CmsBlockGuiCommunicationFactory extends AbstractCommunicationFactory
         return $this->getProvidedDependency(CmsBlockGuiDependencyProvider::PLUGIN_STORE_RELATION_FORM_TYPE);
     }
 
-    /**
-     * @return \Spryker\Zed\CmsBlockGui\Communication\Updater\CmsBlockGlossaryUpdaterInterface
-     */
     public function createCmsBlockGlossaryUpdater(): CmsBlockGlossaryUpdaterInterface
     {
         return new CmsBlockGlossaryUpdater(
@@ -202,9 +199,6 @@ class CmsBlockGuiCommunicationFactory extends AbstractCommunicationFactory
         );
     }
 
-    /**
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function createToggleActiveCmsBlockForm(): FormInterface
     {
         return $this->getFormFactory()->create(ToggleActiveCmsBlockForm::class);

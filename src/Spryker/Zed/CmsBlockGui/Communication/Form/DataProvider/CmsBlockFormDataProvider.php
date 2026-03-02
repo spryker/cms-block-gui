@@ -30,11 +30,6 @@ class CmsBlockFormDataProvider
      */
     protected $localFacade;
 
-    /**
-     * @param \Spryker\Zed\CmsBlockGui\Dependency\QueryContainer\CmsBlockGuiToCmsBlockQueryContainerInterface $cmsBlockQueryContainer
-     * @param \Spryker\Zed\CmsBlockGui\Dependency\Facade\CmsBlockGuiToCmsBlockInterface $cmsBlockFacade
-     * @param \Spryker\Zed\CmsBlockGui\Dependency\Facade\CmsBlockGuiToLocaleInterface $localFacade
-     */
     public function __construct(
         CmsBlockGuiToCmsBlockQueryContainerInterface $cmsBlockQueryContainer,
         CmsBlockGuiToCmsBlockInterface $cmsBlockFacade,

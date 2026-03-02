@@ -57,12 +57,6 @@ class EditGlossaryController extends AbstractCmsBlockController
         ]);
     }
 
-    /**
-     * @param int $idCmsBlock
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\Form\FormInterface
-     */
     protected function getGlossaryForm(int $idCmsBlock, Request $request): FormInterface
     {
         $glossaryFormDataProvider = $this->getFactory()
@@ -73,12 +67,6 @@ class EditGlossaryController extends AbstractCmsBlockController
             ->handleRequest($request);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsBlockGlossaryTransfer $cmsBlockGlossaryTransfer
-     * @param int $idCmsBlock
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     protected function saveFormData(CmsBlockGlossaryTransfer $cmsBlockGlossaryTransfer, int $idCmsBlock): RedirectResponse
     {
         $cmsBlockGlossaryTransfer = $this->getFactory()
@@ -99,11 +87,6 @@ class EditGlossaryController extends AbstractCmsBlockController
         return $this->redirectResponse($redirectUrl);
     }
 
-    /**
-     * @param int $idCmsBlock
-     *
-     * @return \Generated\Shared\Transfer\TabsViewTransfer
-     */
     protected function getPlaceholderTabs(int $idCmsBlock): TabsViewTransfer
     {
         $cmsBlockGlossaryTransfer = $this->getFactory()

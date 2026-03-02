@@ -20,14 +20,8 @@ interface CmsBlockGuiToCmsBlockQueryContainerInterface
      */
     public function queryCmsBlockByName($name): SpyCmsBlockQuery;
 
-    /**
-     * @return \Orm\Zed\CmsBlock\Persistence\SpyCmsBlockQuery
-     */
     public function queryCmsBlockWithTemplate(): SpyCmsBlockQuery;
 
-    /**
-     * @return \Orm\Zed\CmsBlock\Persistence\SpyCmsBlockTemplateQuery
-     */
     public function queryTemplates(): SpyCmsBlockTemplateQuery;
 
     /**

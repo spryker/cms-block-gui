@@ -33,18 +33,8 @@ interface CmsBlockGuiToCmsBlockInterface
      */
     public function deactivateById($idCmsBlock): void;
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsBlockTransfer $cmsBlockTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsBlockTransfer
-     */
     public function updateCmsBlock(CmsBlockTransfer $cmsBlockTransfer): CmsBlockTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsBlockTransfer $cmsBlockTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsBlockTransfer
-     */
     public function createCmsBlock(CmsBlockTransfer $cmsBlockTransfer): CmsBlockTransfer;
 
     /**
@@ -61,11 +51,6 @@ interface CmsBlockGuiToCmsBlockInterface
      */
     public function findGlossary($idCmsBlock): CmsBlockGlossaryTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsBlockGlossaryTransfer $cmsBlockGlossaryTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsBlockGlossaryTransfer
-     */
     public function saveGlossary(CmsBlockGlossaryTransfer $cmsBlockGlossaryTransfer): CmsBlockGlossaryTransfer;
 
     /**

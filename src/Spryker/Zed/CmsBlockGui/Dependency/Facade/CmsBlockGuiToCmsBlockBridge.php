@@ -55,21 +55,11 @@ class CmsBlockGuiToCmsBlockBridge implements CmsBlockGuiToCmsBlockInterface
         $this->cmsBlockFacade->deactivateById($idCmsBlock);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsBlockTransfer $cmsBlockTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsBlockTransfer
-     */
     public function updateCmsBlock(CmsBlockTransfer $cmsBlockTransfer): CmsBlockTransfer
     {
         return $this->cmsBlockFacade->updateCmsBlock($cmsBlockTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsBlockTransfer $cmsBlockTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsBlockTransfer
-     */
     public function createCmsBlock(CmsBlockTransfer $cmsBlockTransfer): CmsBlockTransfer
     {
         return $this->cmsBlockFacade->createCmsBlock($cmsBlockTransfer);
@@ -95,11 +85,6 @@ class CmsBlockGuiToCmsBlockBridge implements CmsBlockGuiToCmsBlockInterface
         return $this->cmsBlockFacade->findGlossary($idCmsBlock);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsBlockGlossaryTransfer $cmsBlockGlossaryTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsBlockGlossaryTransfer
-     */
     public function saveGlossary(CmsBlockGlossaryTransfer $cmsBlockGlossaryTransfer): CmsBlockGlossaryTransfer
     {
         return $this->cmsBlockFacade->saveGlossary($cmsBlockGlossaryTransfer);

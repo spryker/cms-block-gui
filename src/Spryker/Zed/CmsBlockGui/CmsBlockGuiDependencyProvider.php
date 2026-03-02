@@ -237,11 +237,6 @@ class CmsBlockGuiDependencyProvider extends AbstractBundleDependencyProvider
         );
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCmsBlockGlossaryAfterFindPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_CMS_BLOCK_GLOSSARY_AFTER_FIND, function () {
@@ -259,11 +254,6 @@ class CmsBlockGuiDependencyProvider extends AbstractBundleDependencyProvider
         return [];
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCmsBlockGlossaryBeforeSavePlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_CMS_BLOCK_GLOSSARY_BEFORE_SAVE, function () {

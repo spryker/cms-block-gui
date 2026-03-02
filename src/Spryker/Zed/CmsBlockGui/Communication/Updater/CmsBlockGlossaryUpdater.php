@@ -31,11 +31,6 @@ class CmsBlockGlossaryUpdater implements CmsBlockGlossaryUpdaterInterface
         $this->cmsBlockGlossaryBeforeSavePlugins = $cmsBlockGlossaryBeforeSavePlugins;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsBlockGlossaryTransfer $cmsBlockGlossaryTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsBlockGlossaryTransfer
-     */
     public function updateAfterFind(CmsBlockGlossaryTransfer $cmsBlockGlossaryTransfer): CmsBlockGlossaryTransfer
     {
         foreach ($this->cmsBlockGlossaryAfterFindPlugins as $cmsBlockGlossaryAfterFindPlugin) {
@@ -45,11 +40,6 @@ class CmsBlockGlossaryUpdater implements CmsBlockGlossaryUpdaterInterface
         return $cmsBlockGlossaryTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsBlockGlossaryTransfer $cmsBlockGlossaryTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsBlockGlossaryTransfer
-     */
     public function updateBeforeSave(CmsBlockGlossaryTransfer $cmsBlockGlossaryTransfer): CmsBlockGlossaryTransfer
     {
         foreach ($this->cmsBlockGlossaryBeforeSavePlugins as $cmsBlockGlossaryBeforeSavePlugin) {

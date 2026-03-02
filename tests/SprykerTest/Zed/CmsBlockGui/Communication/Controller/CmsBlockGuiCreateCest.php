@@ -23,11 +23,6 @@ use SprykerTest\Zed\CmsBlockGui\PageObject\CmsBlockGuiCreatePage;
  */
 class CmsBlockGuiCreateCest
 {
-    /**
-     * @param \SprykerTest\Zed\CmsBlockGui\CmsBlockGuiCommunicationTester $i
-     *
-     * @return void
-     */
     public function breadcrumbIsVisible(CmsBlockGuiCommunicationTester $i): void
     {
         $i->registerCmsBlockStoreRelationFormTypePlugin();

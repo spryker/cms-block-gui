@@ -19,9 +19,6 @@ class CmsBlockGlossaryTabs extends AbstractTabs
      */
     protected $glossaryTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsBlockGlossaryTransfer $glossaryTransfer
-     */
     public function __construct(CmsBlockGlossaryTransfer $glossaryTransfer)
     {
         $this->glossaryTransfer = $glossaryTransfer;

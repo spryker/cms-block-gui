@@ -75,11 +75,6 @@ class CmsBlockForm extends AbstractType
      */
     public const GROUP_UNIQUE_BLOCK_CHECK = 'unique_block_check';
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setRequired(static::OPTION_TEMPLATE_CHOICES);

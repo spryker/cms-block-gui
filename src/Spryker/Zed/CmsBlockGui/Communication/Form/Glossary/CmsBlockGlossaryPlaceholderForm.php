@@ -60,11 +60,6 @@ class CmsBlockGlossaryPlaceholderForm extends AbstractType
      */
     public const GROUP_PLACEHOLDER_CHECK = 'placeholder_check';
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([

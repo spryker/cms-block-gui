@@ -69,11 +69,6 @@ class TwigContentValidator extends ConstraintValidator
         return strpos($value, '{{') !== false || strpos($value, '}}') !== false;
     }
 
-    /**
-     * @param string $value
-     *
-     * @return \Twig\Source
-     */
     protected function createSource(string $value): Source
     {
         $value = str_replace(['</p>', '<br>'], PHP_EOL, $value);

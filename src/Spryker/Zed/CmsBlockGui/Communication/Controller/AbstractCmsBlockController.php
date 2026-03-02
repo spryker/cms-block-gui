@@ -33,11 +33,6 @@ abstract class AbstractCmsBlockController extends AbstractController
      */
     public const MESSAGE_CMS_BLOCK_INVALID_ID_ERROR = 'CMS block with provided ID doesn’t exist.';
 
-    /**
-     * @param int $idCmsBlock
-     *
-     * @return \Generated\Shared\Transfer\CmsBlockTransfer|null
-     */
     protected function findCmsBlockById(int $idCmsBlock): ?CmsBlockTransfer
     {
         try {
@@ -53,9 +48,6 @@ abstract class AbstractCmsBlockController extends AbstractController
         return $cmsBlockTransfer;
     }
 
-    /**
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     protected function getNotFoundBlockRedirect(): RedirectResponse
     {
         $redirectUrl = Url::generate(static::REDIRECT_URL_DEFAULT)->build();

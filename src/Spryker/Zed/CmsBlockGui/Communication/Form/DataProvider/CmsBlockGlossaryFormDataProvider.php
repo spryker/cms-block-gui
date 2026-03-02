@@ -25,10 +25,6 @@ class CmsBlockGlossaryFormDataProvider
      */
     protected $cmsGlossaryUpdater;
 
-    /**
-     * @param \Spryker\Zed\CmsBlockGui\Dependency\Facade\CmsBlockGuiToCmsBlockInterface $cmsBlockFacade
-     * @param \Spryker\Zed\CmsBlockGui\Communication\Updater\CmsBlockGlossaryUpdaterInterface $cmsGlossaryUpdater
-     */
     public function __construct(CmsBlockGuiToCmsBlockInterface $cmsBlockFacade, CmsBlockGlossaryUpdaterInterface $cmsGlossaryUpdater)
     {
         $this->cmsBlockFacade = $cmsBlockFacade;

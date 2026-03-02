@@ -79,10 +79,6 @@ class CmsBlockTable extends AbstractTable
      */
     protected $cmsBlockQueryContainer;
 
-    /**
-     * @param \Orm\Zed\CmsBlock\Persistence\SpyCmsBlockQuery $cmsBlockQuery
-     * @param \Spryker\Zed\CmsBlockGui\Dependency\QueryContainer\CmsBlockGuiToCmsBlockQueryContainerInterface $cmsBlockQueryContainer
-     */
     public function __construct(SpyCmsBlockQuery $cmsBlockQuery, CmsBlockGuiToCmsBlockQueryContainerInterface $cmsBlockQueryContainer)
     {
         $this->cmsBlockQuery = $cmsBlockQuery;

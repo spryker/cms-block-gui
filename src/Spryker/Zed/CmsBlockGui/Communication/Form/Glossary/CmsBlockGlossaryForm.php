@@ -42,11 +42,6 @@ class CmsBlockGlossaryForm extends AbstractType
         $this->addCmsBlockGlossaryPlaceholderFormCollection($builder, $options);
     }
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setRequired(static::OPTION_DATA_CLASS_PLACEHOLDERS);
