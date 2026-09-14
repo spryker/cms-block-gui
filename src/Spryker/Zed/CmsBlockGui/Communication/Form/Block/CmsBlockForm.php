@@ -174,8 +174,8 @@ class CmsBlockForm extends AbstractType
             'label' => 'Template',
             'choices' => array_flip($choices[static::OPTION_TEMPLATE_CHOICES]),
             'constraints' => [
-                new Callback([
-                    'callback' => function ($name, ExecutionContextInterface $context) {
+                new Callback(
+                    callback: function ($name, ExecutionContextInterface $context) {
                         /** @var \Generated\Shared\Transfer\CmsBlockTransfer $cmsBlockTransfer */
                         $cmsBlockTransfer = $context->getRoot()->getViewData();
 
@@ -187,7 +187,7 @@ class CmsBlockForm extends AbstractType
                             $context->addViolation('Chosen template is not available anymore');
                         }
                     },
-                ]),
+                ),
             ],
         ]);
 
@@ -206,8 +206,8 @@ class CmsBlockForm extends AbstractType
             'constraints' => [
                 new NotBlank(),
                 new Length(['max' => 255]),
-                new Callback([
-                    'callback' => function ($name, ExecutionContextInterface $context) {
+                new Callback(
+                    callback: function ($name, ExecutionContextInterface $context) {
                         /** @var \Generated\Shared\Transfer\CmsBlockTransfer $cmsBlockTransfer */
                         $cmsBlockTransfer = $context->getRoot()->getViewData();
 
@@ -215,8 +215,8 @@ class CmsBlockForm extends AbstractType
                             $context->addViolation('Block with the same Name already exists.');
                         }
                     },
-                    'groups' => [static::GROUP_UNIQUE_BLOCK_CHECK],
-                ]),
+                    groups: [static::GROUP_UNIQUE_BLOCK_CHECK],
+                ),
             ],
         ]);
 
@@ -266,8 +266,8 @@ class CmsBlockForm extends AbstractType
      */
     protected function createValidFromRangeConstraint()
     {
-        return new Callback([
-            'callback' => function ($dateTimeFrom, ExecutionContextInterface $context) {
+        return new Callback(
+            callback: function ($dateTimeFrom, ExecutionContextInterface $context) {
                 /** @var \Generated\Shared\Transfer\CmsBlockTransfer $cmsBlockTransfer */
                 $cmsBlockTransfer = $context->getRoot()->getData();
                 if (!$dateTimeFrom) {
@@ -284,7 +284,7 @@ class CmsBlockForm extends AbstractType
                     }
                 }
             },
-        ]);
+        );
     }
 
     /**
@@ -292,8 +292,8 @@ class CmsBlockForm extends AbstractType
      */
     protected function createValidToFieldRangeConstraint()
     {
-        return new Callback([
-            'callback' => function ($dateTimeTo, ExecutionContextInterface $context) {
+        return new Callback(
+            callback: function ($dateTimeTo, ExecutionContextInterface $context) {
                 /** @var \Generated\Shared\Transfer\CmsBlockTransfer $cmsBlockTransfer */
                 $cmsBlockTransfer = $context->getRoot()->getData();
 
@@ -307,7 +307,7 @@ class CmsBlockForm extends AbstractType
                     }
                 }
             },
-        ]);
+        );
     }
 
     /**
@@ -369,6 +369,9 @@ class CmsBlockForm extends AbstractType
         return $this;
     }
 
+    /**
+     * @phpstan-return class-string<\Symfony\Component\Form\FormTypeInterface>
+     */
     protected function getValidityFieldType(): string
     {
         if ($this->isGuiDatePickerTypeAvailable()) {
