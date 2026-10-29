@@ -225,7 +225,7 @@ class CmsBlockTable extends AbstractTable
             return $this->generateLabel('Active', 'label-primary');
         }
 
-        return $this->generateLabel('Inactive', 'label-danger');
+        return $this->generateLabel('Inactive', 'badge-outline-dark');
     }
 
     /**
